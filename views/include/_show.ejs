@@ -1,0 +1,17 @@
+<% for(var i = 0; i < apps.length; i++) { %>
+<tr>
+    <td><%= apps[i]._id %></td>
+    <td><%= apps[i].package %></td>
+    <td><%= apps[i].name %></td>
+    <td><%= apps[i].modifiedAt %></td>
+    <td><%= apps[i].current_version %></td>
+    <td>
+        <a href="/update-app?id=<%= apps[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= apps[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>
